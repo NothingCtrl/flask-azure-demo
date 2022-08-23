@@ -16,4 +16,4 @@ spec:
         - name: "rangotest-c3f4"
           image: "rangoregistrytest.azurecr.io/rangotest"
           ports:
-          - containerPort: 80
+          - containerPort: 8080
