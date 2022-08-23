@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
     name: "rangotest-c3f4"
@@ -12,6 +12,9 @@ spec:
           http:
             paths:
             - path: /
+              pathType: Prefix
               backend:
-                serviceName: "rangotest-c3f4"
-                servicePort: 80
+                service:
+                    name: "rangotest-c3f4"
+                    port: 
+                        number: 80
