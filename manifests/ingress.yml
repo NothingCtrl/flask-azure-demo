@@ -17,4 +17,4 @@ spec:
                 service:
                     name: "rangotest-c3f4"
                     port: 
-                        number: 80
+                        number: 8080
