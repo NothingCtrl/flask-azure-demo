@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "rangotest-c3f4"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "rangotest-c3f4"
+  template:
+    metadata:
+      labels:
+        app: "rangotest-c3f4"
+    spec:
+      containers:
+        - name: "rangotest-c3f4"
+          image: "rangoregistrytest.azurecr.io/rangotest"
+          ports:
+          - containerPort: 80
